@@ -1,0 +1,35 @@
+﻿{
+  "activities": [
+    {
+      "activityId": 51007,
+      "activityParentId": 90019,
+      "calories": 230,
+    }
+  ],
+  "summary": {
+    "activityCalories": 230,
+    "caloriesBMR": 1913,
+    "distances": [
+      {
+        "activity": "tracker",
+        "distance": 1.32
+      },
+      {
+        "activity": "loggedActivities",
+        "distance": 0
+      },
+      {
+        "activity": "total",
+        "distance": 1.32
+      },
+      {
+        "activity": "veryActive",
+        "distance": 0.51
+      }
+    ],
+    "elevation": 48.77,
+    "fairlyActiveMinutes": 0,
+    "floors": 16,
+    "lightlyActiveMinutes": 0,
+  }
+}

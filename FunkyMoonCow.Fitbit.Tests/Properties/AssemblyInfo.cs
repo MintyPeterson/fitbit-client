@@ -1,15 +1,14 @@
-﻿using System.Resources;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FITBIT® Client")]
-[assembly: AssemblyDescription("A .NET FITBIT® client")]
+[assembly: AssemblyTitle("FITBIT® Client Tests")]
+[assembly: AssemblyDescription("Tests sets for .NET FITBIT® client")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tom Cook")]
-[assembly: AssemblyProduct("FunkyMoonCow.Fitbit.Client")]
+[assembly: AssemblyProduct("FunkyMoonCow.Fitbit.Tests")]
 [assembly: AssemblyCopyright("Copyright © 2016: Tom Cook")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("61a1f9b1-105b-4ad7-8dd3-e577a01b4798")]
+[assembly: Guid("21257844-07df-441c-bbde-58409d69f073")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -34,5 +33,3 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: NeutralResourcesLanguage("en-GB")]
-
