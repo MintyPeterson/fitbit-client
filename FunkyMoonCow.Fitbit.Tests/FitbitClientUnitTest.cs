@@ -430,6 +430,681 @@ namespace FunkyMoonCow.Fitbit.Tests
     }
 
     /// <summary>
+    ///  Tests <see cref="FitbitClient.GetActivityIntradayTimeSeries"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetActivityIntradayTimeSeries()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.LogActivity"/>.
+    /// </summary>
+    [TestMethod]
+    public void LogActivity()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.DeleteActivityLog"/>.
+    /// </summary>
+    [TestMethod]
+    public void DeleteActivityLog()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetActivityLogsList"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetActivityLogsList()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetActivityTcx"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetActivityTcx()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.BrowseActivityTypes"/>.
+    /// </summary>
+    [TestMethod]
+    public void BrowseActivityTypes()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetActivityType"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetActivityType()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetFrequentActivities"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetFrequentActivities()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetRecentActivityTypes"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetRecentActivityTypes()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetFavoriteActivities"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetFavoriteActivities()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.AddFavoriteActivity"/>.
+    /// </summary>
+    [TestMethod]
+    public void AddFavoriteActivity()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.DeleteFavoriteActivity"/>.
+    /// </summary>
+    [TestMethod]
+    public void DeleteFavoriteActivity()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetActivityGoals"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetActivityGoals()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.UpdateActivityGoals"/>.
+    /// </summary>
+    [TestMethod]
+    public void UpdateActivityGoals()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetLifetimeStats"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetLifetimeStats()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetBodyFatLogs"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetBodyFatLogs()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.LogBodyFat"/>.
+    /// </summary>
+    [TestMethod]
+    public void LogBodyFat()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.DeleteBodyFatLog"/>.
+    /// </summary>
+    [TestMethod]
+    public void DeleteBodyFatLog()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetBodyTimeSeries"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetBodyTimeSeries()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetBodyGoals"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetBodyGoals()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.UpdateBodyFatGoal"/>.
+    /// </summary>
+    [TestMethod]
+    public void UpdateBodyFatGoal()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.UpdateWeightGoal"/>.
+    /// </summary>
+    [TestMethod]
+    public void UpdateWeightGoal()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetWeightLogs"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetWeightLogs()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.LogWeight"/>.
+    /// </summary>
+    [TestMethod]
+    public void LogWeight()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.DeleteWeightLog"/>.
+    /// </summary>
+    [TestMethod]
+    public void DeleteWeightLog()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetDevices"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetDevices()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetAlarms"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetAlarms()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.AddAlarm"/>.
+    /// </summary>
+    [TestMethod]
+    public void AddAlarm()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.UpdateAlarm"/>.
+    /// </summary>
+    [TestMethod]
+    public void UpdateAlarm()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.DeleteAlarm"/>.
+    /// </summary>
+    [TestMethod]
+    public void DeleteAlarm()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetFoodLocales"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetFoodLocales()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetFoodGoals"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetFoodGoals()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetFoodLogs"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetFoodLogs()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetWaterLogs"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetWaterLogs()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetWaterGoal"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetWaterGoal()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.EditFoodLog"/>.
+    /// </summary>
+    [TestMethod]
+    public void EditFoodLog()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.LogWater"/>.
+    /// </summary>
+    [TestMethod]
+    public void LogWater()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.UpdateFoodGoal"/>.
+    /// </summary>
+    [TestMethod]
+    public void UpdateFoodGoal()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.UpdateWaterGoal"/>.
+    /// </summary>
+    [TestMethod]
+    public void UpdateWaterGoal()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.DeleteFoodLog"/>.
+    /// </summary>
+    [TestMethod]
+    public void DeleteFoodLog()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.UpdateWaterLog"/>.
+    /// </summary>
+    [TestMethod]
+    public void UpdateWaterLog()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.NotImplementedException"/>.
+    /// </summary>
+    [TestMethod]
+    public void DeleteWaterLog()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetFavoriteFoods"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetFavoriteFoods()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetFrequentFoods"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetFrequentFoods()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetRecentFoods"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetRecentFoods()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.AddFavoriteFood"/>.
+    /// </summary>
+    [TestMethod]
+    public void AddFavoriteFood()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.DeleteFavoriteFood"/>.
+    /// </summary>
+    [TestMethod]
+    public void DeleteFavoriteFood()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetMeals"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetMeals()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.CreateMeal"/>.
+    /// </summary>
+    [TestMethod]
+    public void CreateMeal()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetMeal"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetMeal()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.EditMeal"/>.
+    /// </summary>
+    [TestMethod]
+    public void EditMeal()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.DeleteMeal"/>.
+    /// </summary>
+    [TestMethod]
+    public void DeleteMeal()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.CreateFood"/>.
+    /// </summary>
+    [TestMethod]
+    public void CreateFood()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.DeleteCustomFood"/>.
+    /// </summary>
+    [TestMethod]
+    public void DeleteCustomFood()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetFood"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetFood()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetFoodUnits"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetFoodUnits()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.SearchFoods"/>.
+    /// </summary>
+    [TestMethod]
+    public void SearchFoods()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetFriends"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetFriends()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetFriendsLeaderboard"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetFriendsLeaderboard()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.InviteFriend"/>.
+    /// </summary>
+    [TestMethod]
+    public void InviteFriend()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetFriendInvitations"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetFriendInvitations()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.RespondToFriendInvitation"/>.
+    /// </summary>
+    [TestMethod]
+    public void RespondToFriendInvitation()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetHeartRateTimeSeries"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetHeartRateTimeSeries()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetHeartRateIntradayTimeSeries"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetHeartRateIntradayTimeSeries()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetSleepLogs"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetSleepLogs()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetSleepGoal"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetSleepGoal()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.UpdateSleepGoal"/>.
+    /// </summary>
+    [TestMethod]
+    public void UpdateSleepGoal()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetSleepTimeSeries"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetSleepTimeSeries()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.LogSleep"/>.
+    /// </summary>
+    [TestMethod]
+    public void LogSleep()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.DeleteSleepLog"/>.
+    /// </summary>
+    [TestMethod]
+    public void DeleteSleepLog()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.DeleteSubscription"/>.
+    /// </summary>
+    [TestMethod]
+    public void DeleteSubscription()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetSubscriptions"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetSubscriptions()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetProfile"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetProfile()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.UpdateProfile"/>.
+    /// </summary>
+    [TestMethod]
+    public void UpdateProfile()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
+    ///  Tests <see cref="FitbitClient.GetBadges"/>.
+    /// </summary>
+    [TestMethod]
+    public void GetBadges()
+    {
+      Assert.Inconclusive("Not implemented");
+    }
+
+    /// <summary>
     /// Creates a valid <see cref="FitbitClient"/> instance.
     /// </summary>
     /// <returns>A <see cref="FitbitClient"/>.</returns>
