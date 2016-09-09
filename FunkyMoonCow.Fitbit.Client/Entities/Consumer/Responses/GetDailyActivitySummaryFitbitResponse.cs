@@ -43,8 +43,11 @@ namespace FunkyMoonCow.Fitbit
 
       this.Activities = Enumerable.Empty<GetDailyActivitySummaryFitbitResponseSummaryActivity>();
 
-      // Attempt to process an activity summary response.
-      this.ParseResponse();
+      if (!this.Errors.Any())
+      {
+        // Attempt to process the response.
+        this.ParseResponse();
+      }
     }
 
     /// <summary>

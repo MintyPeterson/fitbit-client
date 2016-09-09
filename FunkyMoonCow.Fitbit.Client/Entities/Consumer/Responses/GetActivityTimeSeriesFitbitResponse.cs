@@ -28,8 +28,11 @@ namespace FunkyMoonCow.Fitbit
     {
       this.Log = Enumerable.Empty<GetActivityTimeSeriesFitbitResponseLog>();
 
-      // Attempt to process an activity summary response.
-      this.ParseResponse();
+      if (!this.Errors.Any())
+      {
+        // Attempt to process the response.
+        this.ParseResponse();
+      }
     }
 
     /// <summary>

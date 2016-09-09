@@ -45,11 +45,11 @@ namespace FunkyMoonCow.Fitbit
     public AddSubscriptionFitbitResponse(HttpStatusCode statusCode, JObject response)
       : base(statusCode, response)
     {
-      this.StatusCode = statusCode;
-      this.Response = response;
-
-      // Attempt to process any error messages.
-      this.ParseResponse();
+      if (!this.Errors.Any())
+      {
+        // Attempt to process the response.
+        this.ParseResponse();
+      }
     }
 
     /// <summary>
