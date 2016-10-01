@@ -76,6 +76,8 @@
     <EmbeddedResource Include="Responses\Invalid\GetDailyActivitySummaryResponse.json" />
     <EmbeddedResource Include="Responses\Valid\GetFoodOrWaterTimeSeriesResponse.json" />
     <EmbeddedResource Include="Responses\Invalid\GetFoodOrWaterTimeSeriesResponse.json" />
+    <EmbeddedResource Include="Responses\Valid\GetBadges.json" />
+    <EmbeddedResource Include="Responses\Invalid\GetBadges.json" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

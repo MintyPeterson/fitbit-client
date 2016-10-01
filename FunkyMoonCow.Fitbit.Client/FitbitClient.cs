@@ -834,9 +834,23 @@ namespace FunkyMoonCow.Fitbit
     /// <summary>
     /// Gets a user's badges.
     /// </summary>
-    public void GetBadges()
+    /// <param name="request">A <see cref="GetBadgesFitbitRequest"/>.</param>
+    /// <returns>A <see cref="GetBadgesFitbitResponse"/>.</returns>
+    public GetBadgesFitbitResponse GetBadges(GetBadgesFitbitRequest request)
     {
-      throw new NotImplementedException();
+      if (request == null)
+      {
+        throw new ArgumentNullException("request");
+      }
+
+      if (string.IsNullOrWhiteSpace(request.UserId))
+      {
+        request.UserId = FitbitUser.Current.ToString();
+      }
+
+      var response = this.MakeRequest(request);
+
+      return new GetBadgesFitbitResponse(response.StatusCode, response.Response);
     }
 
 

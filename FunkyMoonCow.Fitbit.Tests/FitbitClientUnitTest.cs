@@ -1101,7 +1101,104 @@ namespace FunkyMoonCow.Fitbit.Tests
     [TestMethod]
     public void GetBadges()
     {
-      Assert.Inconclusive("Not implemented");
+      string json;
+
+      // Invalid status.
+      {
+        var response = new GetBadgesFitbitResponse(HttpStatusCode.BadRequest, null);
+
+        Assert.IsTrue(
+          response.Errors
+            .Any(
+              e => e.ErrorType == FitbitResponseErrorType.Unexpected
+            )
+          );
+      }
+
+      // Valid response.
+      json = this.LoadResponse("Valid.GetBadges.json");
+      {
+        var response = new GetBadgesFitbitResponse(HttpStatusCode.OK, JObject.Parse(json));
+
+        Assert.AreEqual(response.Badges.Count(), 3);
+
+        var expected =
+          new GetBadgesFitbitResponseBadge[]
+          {
+            new GetBadgesFitbitResponseBadge
+            {
+              BadgeType = "DAILY_FLOORS",
+              DateMostRecentlyAchieved = new DateTime(2012, 04, 27),
+              SmallImageUrl = "http://www.fitbit.com/images/dash/badge_daily_floors10.png",
+              LargeImageUrl = "http://www.fitbit.com/images/dash/75px/badge_daily_floors10.png",
+              NumberOfTimesAchieved = 3,
+              Value = 10
+            },
+            new GetBadgesFitbitResponseBadge
+            {
+              BadgeType = "DAILY_FLOORS",
+              DateMostRecentlyAchieved = new DateTime(2012, 04, 27),
+              SmallImageUrl = "http://www.fitbit.com/images/dash/badge_daily_floors25.png",
+              LargeImageUrl = "http://www.fitbit.com/images/dash/75px/badge_daily_floors25.png",
+              NumberOfTimesAchieved = 3,
+              Value = 25
+            },
+            new GetBadgesFitbitResponseBadge
+            {
+              BadgeType = "LIFETIME_KILOMETERS",
+              DateMostRecentlyAchieved = new DateTime(2011, 09, 26),
+              SmallImageUrl = "http://www.fitbit.com/images/dash/badge_lifetime_kilometers50.png",
+              LargeImageUrl =
+                "http://www.fitbit.com/images/dash/75px/badge_lifetime_kilometers50.png",
+              NumberOfTimesAchieved = 1,
+              Unit = "KILOMETERS",
+              Value = 50
+            }
+          };
+
+        var actual = response.Badges.ToList();
+
+        for (int i = 0; i < expected.Length; i++)
+        {
+          Assert.AreEqual(expected[i].BadgeType, actual[i].BadgeType);
+
+          Assert.AreEqual(
+            expected[i].DateMostRecentlyAchieved,
+            actual[i].DateMostRecentlyAchieved
+          );
+
+          Assert.AreEqual(expected[i].LargeImageUrl, actual[i].LargeImageUrl);
+          Assert.AreEqual(expected[i].NumberOfTimesAchieved, actual[i].NumberOfTimesAchieved);
+          Assert.AreEqual(expected[i].SmallImageUrl, actual[i].SmallImageUrl);
+          Assert.AreEqual(expected[i].Unit, actual[i].Unit);
+          Assert.AreEqual(expected[i].Value, actual[i].Value);
+        }
+      }
+
+      // Missing response.
+      {
+        var response = new GetBadgesFitbitResponse(HttpStatusCode.OK, null);
+
+        Assert.IsTrue(
+          response.Errors
+            .Any(
+              e => e.ErrorType == FitbitResponseErrorType.Unexpected
+            )
+          );
+      }
+
+      // Invalid response.
+      json = this.LoadResponse("Invalid.GetBadges.json");
+      {
+        var response = new GetBadgesFitbitResponse(HttpStatusCode.OK, JObject.Parse(json));
+
+        Assert.IsTrue(
+          response.Errors
+            .Any(
+              e => e.ErrorType == FitbitResponseErrorType.Unexpected
+            )
+          );
+      }
     }
 
     /// <summary>

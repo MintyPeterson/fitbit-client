@@ -1,0 +1,29 @@
+﻿{
+  "badges":[
+    {
+      "badgeType": "DAILY_FLOORS",
+      "dateTime": "2012-04-27",
+      "image50px": "http://www.fitbit.com/images/dash/badge_daily_floors10.png",
+      "image75px": "http://www.fitbit.com/images/dash/75px/badge_daily_floors10.png",
+      "timesAchieved": 3,
+      "value": 10
+    },
+    {
+      "badgeType":"DAILY_FLOORS",
+      "dateTime":"2012-04-27",
+      "image50px":"http://www.fitbit.com/images/dash/badge_daily_floors25.png",
+      "image75px":"http://www.fitbit.com/images/dash/75px/badge_daily_floors25.png",
+      "timesAchieved":3,
+      "value":25
+    },
+    {
+      "badgeType":"LIFETIME_KILOMETERS",
+      "dateTime":"2011-09-26",
+      "image50px":"http://www.fitbit.com/images/dash/badge_lifetime_kilometers50.png",
+      "image75px":"http://www.fitbit.com/images/dash/75px/badge_lifetime_kilometers50.png",
+      "timesAchieved":1,
+      "unit":"KILOMETERS",
+      "value":50
+    }
+  ]
+}
