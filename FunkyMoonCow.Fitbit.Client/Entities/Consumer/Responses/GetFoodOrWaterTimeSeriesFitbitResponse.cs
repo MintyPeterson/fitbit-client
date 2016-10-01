@@ -15,7 +15,7 @@ namespace FunkyMoonCow.Fitbit
   public class GetFoodOrWaterTimeSeriesFitbitResponse : FitbitResponse
   {
     /// <summary>
-    /// Gets the <see cref="IEnumerable{FoodOrWaterTimeSeriesLogFitbitResponse}"/>.
+    /// Gets the <see cref="IEnumerable{GetFoodOrWaterTimeSeriesFitbitResponseLog}"/>.
     /// </summary>
     public IEnumerable<GetFoodOrWaterTimeSeriesFitbitResponseLog> Log { get; private set; }
 
