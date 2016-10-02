@@ -70,6 +70,7 @@
     <Compile Include="Entities\Consumer\Requests\AddSubscriptionFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Requests\FitbitRequestAction.cs" />
     <Compile Include="Entities\Consumer\Requests\GetBadgesFitbitRequest.cs" />
+    <Compile Include="Entities\Consumer\Requests\IFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Responses\GetActivityTimeSeriesFitbitResponse.cs" />
     <Compile Include="Entities\Consumer\Requests\GetDailyActivitySummaryFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Responses\AddSubscriptionFitbitResponse.cs" />

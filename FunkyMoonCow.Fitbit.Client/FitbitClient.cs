@@ -853,13 +853,12 @@ namespace FunkyMoonCow.Fitbit
       return new GetBadgesFitbitResponse(response.StatusCode, response.Response);
     }
 
-
     /// <summary>
     /// Makes a request to the Fitbit API.
     /// </summary>
-    /// <param name="request">A <see cref="FitbitRequest"/>.</param>
+    /// <param name="request">An <see cref="IFitbitRequest"/>.</param>
     /// <returns>An <see cref="FitbitApiResponse"/>.</returns>
-    private FitbitApiResponse MakeRequest(FitbitRequest request)
+    private FitbitApiResponse MakeRequest(IFitbitRequest request)
     {
       var accessToken = string.Empty;
 
