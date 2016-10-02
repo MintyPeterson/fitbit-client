@@ -76,6 +76,7 @@
     <Compile Include="Entities\Consumer\Responses\AddSubscriptionFitbitResponse.cs" />
     <Compile Include="Entities\Consumer\Responses\GetDailyActivitySummaryFitbitResponse.cs" />
     <Compile Include="Entities\Consumer\Responses\GetBadgesFitbitResponse.cs" />
+    <Compile Include="Entities\Consumer\Responses\IFitbitResponse.cs" />
     <Compile Include="Helpers\DateTimeRange.cs" />
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Entities\Fitbit\FitbitApiResponse.cs" />

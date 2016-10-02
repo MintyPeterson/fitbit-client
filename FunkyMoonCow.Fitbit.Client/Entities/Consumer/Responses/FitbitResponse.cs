@@ -9,9 +9,9 @@ using System.Net;
 namespace FunkyMoonCow.Fitbit
 {
   /// <summary>
-  /// Provides a base class for client responses.
+  /// Provides a base class for consumer responses.
   /// </summary>
-  public abstract class FitbitResponse
+  public abstract class FitbitResponse : IFitbitResponse
   {
     /// <summary>
     /// Gets or sets the <see cref="StatusCode"/>.
