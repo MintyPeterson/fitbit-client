@@ -31,11 +31,7 @@ namespace FunkyMoonCow.Fitbit
     /// <returns>The URI.</returns>
     public override string GetUri()
     {
-      return
-        string.Format(
-          "/1/user/{0}/badges.json",
-          this.UserId
-        );
+      return string.Format("/1/user/{0}/badges.json", this.UserId);
     }
 
     /// <summary>

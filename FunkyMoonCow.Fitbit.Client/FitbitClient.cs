@@ -110,6 +110,21 @@ namespace FunkyMoonCow.Fitbit
     }
 
     /// <summary>
+    /// Gets a <see cref="FitbitApiResponse"/> for a given <see cref="IFitbitRequest"/>.
+    /// </summary>
+    /// <param name="request">A <see cref="IFitbitRequest"/>.</param>
+    /// <remarks>The <see cref="IFitbitRequest"/> will not be validated.</remarks>
+    public FitbitApiResponse GetFitbitApiResponse(IFitbitRequest request)
+    {
+      if (request == null)
+      {
+        throw new ArgumentNullException("request");
+      }
+
+      return this.MakeRequest(request);
+    }
+
+    /// <summary>
     /// Gets food or water time series data in the specified range for a given resource.
     /// </summary>
     /// <param name="request">A <see cref="GetFoodOrWaterTimeSeriesFitbitRequest"/>.</param>
@@ -894,20 +909,8 @@ namespace FunkyMoonCow.Fitbit
           throw new ArgumentOutOfRangeException("request.Action");
         }
 
-        JObject json = null;
-
-        try
-        {
-          json = JObject.Parse(result.Content.ReadAsStringAsync().Result);
-        }
-        catch
-        {
-          // We don't care if the result can't be parsed.
-          // If the API isn't returning valid JSON something else
-          // is wrong.
-        }
-
-        var response = new FitbitApiResponse(result.StatusCode, json);
+        var response =
+          new FitbitApiResponse(result.StatusCode, result.Content.ReadAsStringAsync().Result);
 
         // The access token probably needs refreshing. If this is
         // the first attempt then try the refresh token.
@@ -975,28 +978,18 @@ namespace FunkyMoonCow.Fitbit
         var result =
           client.SendAsync(request).Result;
 
-        JObject json = null;
-
-        try
-        {
-          json = JObject.Parse(result.Content.ReadAsStringAsync().Result);
-        }
-        catch
-        {
-          // We don't care if the result can't be parsed (yet).
-        }
-
-        response = new FitbitApiResponse(result.StatusCode, json);
+        response =
+          new FitbitApiResponse(result.StatusCode, result.Content.ReadAsStringAsync().Result);
 
         if (response.StatusCode == HttpStatusCode.OK)
         {
-          if (json != null)
+          if (response.Response != null)
           {
             var schema = JSchema.Parse(Resources.RefreshAccessTokenSchema);
 
-            if (json.IsValid(schema))
+            if (response.Response.IsValid(schema))
             {
-              dynamic data = json;
+              dynamic data = response.Response;
 
               this.user.AddOrUpdateClaim(
                 FitbitClient.AccessTokenClaimType,
