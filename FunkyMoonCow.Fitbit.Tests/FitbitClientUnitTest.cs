@@ -1129,8 +1129,8 @@ namespace FunkyMoonCow.Fitbit.Tests
             {
               BadgeType = "DAILY_FLOORS",
               DateMostRecentlyAchieved = new DateTime(2012, 04, 27),
-              SmallImageUrl = "http://www.fitbit.com/images/dash/badge_daily_floors10.png",
-              LargeImageUrl = "http://www.fitbit.com/images/dash/75px/badge_daily_floors10.png",
+              ExtraSmallImageUrl = "http://www.fitbit.com/images/dash/badge_daily_floors10.png",
+              SmallImageUrl = "http://www.fitbit.com/images/dash/75px/badge_daily_floors10.png",
               NumberOfTimesAchieved = 3,
               Value = 10
             },
@@ -1138,8 +1138,8 @@ namespace FunkyMoonCow.Fitbit.Tests
             {
               BadgeType = "DAILY_FLOORS",
               DateMostRecentlyAchieved = new DateTime(2012, 04, 27),
-              SmallImageUrl = "http://www.fitbit.com/images/dash/badge_daily_floors25.png",
-              LargeImageUrl = "http://www.fitbit.com/images/dash/75px/badge_daily_floors25.png",
+              ExtraSmallImageUrl = "http://www.fitbit.com/images/dash/badge_daily_floors25.png",
+              SmallImageUrl = "http://www.fitbit.com/images/dash/75px/badge_daily_floors25.png",
               NumberOfTimesAchieved = 3,
               Value = 25
             },
@@ -1147,9 +1147,8 @@ namespace FunkyMoonCow.Fitbit.Tests
             {
               BadgeType = "LIFETIME_KILOMETERS",
               DateMostRecentlyAchieved = new DateTime(2011, 09, 26),
-              SmallImageUrl = "http://www.fitbit.com/images/dash/badge_lifetime_kilometers50.png",
-              LargeImageUrl =
-                "http://www.fitbit.com/images/dash/75px/badge_lifetime_kilometers50.png",
+              ExtraSmallImageUrl = "http://www.fitbit.com/images/dash/badge_lifetime_kilometers50.png",
+              SmallImageUrl = "http://www.fitbit.com/images/dash/75px/badge_lifetime_kilometers50.png",
               NumberOfTimesAchieved = 1,
               Unit = "KILOMETERS",
               Value = 50

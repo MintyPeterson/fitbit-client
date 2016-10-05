@@ -46,13 +46,6 @@ namespace FunkyMoonCow.Fitbit
         return;
       }
 
-      if (this.Response.First == null || this.Response.First.First == null)
-      {
-        this.AddUnexpectedInvalidResponseError();
-
-        return;
-      }
-
       var schema = JSchema.Parse(Resources.GetBadgesSchema);
 
       if (!this.Response.IsValid(schema))
@@ -62,11 +55,11 @@ namespace FunkyMoonCow.Fitbit
         return;
       }
 
-      dynamic response = this.Response.First.First;
+      dynamic response = this.Response;
 
       var badges = new List<GetBadgesFitbitResponseBadge>();
       {
-        foreach (var result in response)
+        foreach (var result in response.badges)
         {
           badges.Add(
             new GetBadgesFitbitResponseBadge
