@@ -78,6 +78,8 @@
     <EmbeddedResource Include="Responses\Invalid\GetFoodOrWaterTimeSeriesResponse.json" />
     <EmbeddedResource Include="Responses\Valid\GetBadges.json" />
     <EmbeddedResource Include="Responses\Invalid\GetBadges.json" />
+    <EmbeddedResource Include="Responses\Invalid\GetProfile.json" />
+    <EmbeddedResource Include="Responses\Valid\GetProfile.json" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

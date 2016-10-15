@@ -69,11 +69,13 @@
     <Compile Include="Entities\Consumer\Requests\GetActivityTimeSeriesFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Requests\AddSubscriptionFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Requests\FitbitRequestAction.cs" />
+    <Compile Include="Entities\Consumer\Requests\GetProfileFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Requests\GetBadgesFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Requests\IFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Responses\GetActivityTimeSeriesFitbitResponse.cs" />
     <Compile Include="Entities\Consumer\Requests\GetDailyActivitySummaryFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Responses\AddSubscriptionFitbitResponse.cs" />
+    <Compile Include="Entities\Consumer\Responses\GetProfileFitbitResponse.cs" />
     <Compile Include="Entities\Consumer\Responses\GetDailyActivitySummaryFitbitResponse.cs" />
     <Compile Include="Entities\Consumer\Responses\GetBadgesFitbitResponse.cs" />
     <Compile Include="Entities\Consumer\Responses\IFitbitResponse.cs" />

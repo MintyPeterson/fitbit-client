@@ -115,6 +115,15 @@ namespace FunkyMoonCow.Fitbit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to { &quot;type&quot;: &quot;object&quot;, &quot;properties&quot;: { &quot;user&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;properties&quot;: {} } }, &quot;required&quot;: [ &quot;user&quot; ] }.
+        /// </summary>
+        internal static string GetProfileSchema {
+            get {
+                return ResourceManager.GetString("GetProfileSchema", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;access_token&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;expires_in&quot;:{&quot;type&quot;:&quot;integer&quot;},&quot;refresh_token&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;token_type&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;user_id&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;access_token&quot;,&quot;expires_in&quot;,&quot;refresh_token&quot;,&quot;token_type&quot;,&quot;user_id&quot;]}.
         /// </summary>
         internal static string RefreshAccessTokenSchema {

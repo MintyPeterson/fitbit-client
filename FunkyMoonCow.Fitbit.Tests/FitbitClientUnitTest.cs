@@ -1083,7 +1083,50 @@ namespace FunkyMoonCow.Fitbit.Tests
     [TestMethod]
     public void GetProfile()
     {
-      Assert.Inconclusive("Not implemented");
+      string json;
+
+      // Invalid status.
+      {
+        var response = new GetProfileFitbitResponse(HttpStatusCode.BadRequest, null);
+
+        Assert.IsTrue(
+          response.Errors
+            .Any(
+              e => e.ErrorType == FitbitResponseErrorType.Unexpected
+            )
+          );
+      }
+
+      // Valid response.
+      json = this.LoadResponse("Valid.GetProfile.json");
+      {
+        var response = new GetProfileFitbitResponse(HttpStatusCode.OK, JObject.Parse(json));
+      }
+
+      // Missing response.
+      {
+        var response = new GetProfileFitbitResponse(HttpStatusCode.OK, null);
+
+        Assert.IsTrue(
+          response.Errors
+            .Any(
+              e => e.ErrorType == FitbitResponseErrorType.Unexpected
+            )
+          );
+      }
+
+      // Invalid response.
+      json = this.LoadResponse("Invalid.GetProfile.json");
+      {
+        var response = new GetProfileFitbitResponse(HttpStatusCode.OK, JObject.Parse(json));
+
+        Assert.IsTrue(
+          response.Errors
+            .Any(
+              e => e.ErrorType == FitbitResponseErrorType.Unexpected
+            )
+          );
+      }
     }
 
     /// <summary>

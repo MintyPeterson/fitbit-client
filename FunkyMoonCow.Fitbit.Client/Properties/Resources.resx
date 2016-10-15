@@ -141,6 +141,10 @@
     <value>{ "type": "array", "items": { "type": "object", "properties": { "dateTime": { "type": "string" }, "value": { "type": "string" } }, "required": [ "dateTime", "value" ] } }</value>
     <comment>The JSON schema for the food or water time series messages.</comment>
   </data>
+  <data name="GetProfileSchema" xml:space="preserve">
+    <value>{ "type": "object", "properties": { "user": { "type": "object", "properties": {} } }, "required": [ "user" ] }</value>
+    <comment>The JSON schema for get profile messages.</comment>
+  </data>
   <data name="RefreshAccessTokenSchema" xml:space="preserve">
     <value>{"type":"object","properties":{"access_token":{"type":"string"},"expires_in":{"type":"integer"},"refresh_token":{"type":"string"},"token_type":{"type":"string"},"user_id":{"type":"string"}},"required":["access_token","expires_in","refresh_token","token_type","user_id"]}</value>
     <comment>The JSON schema for refreshing an access token.</comment>

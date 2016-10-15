@@ -833,9 +833,18 @@ namespace FunkyMoonCow.Fitbit
     /// <summary>
     /// Gets a user's profile.
     /// </summary>
-    public void GetProfile()
+    /// <param name="request">A <see cref="GetProfileFitbitRequest"/>.</param>
+    /// <returns>A <see cref="GetProfileFitbitResponse"/>.</returns>
+    public GetProfileFitbitResponse GetProfile(GetProfileFitbitRequest request)
     {
-      throw new NotImplementedException();
+      if (request == null)
+      {
+        throw new ArgumentNullException("request");
+      }
+
+      var response = this.MakeRequest(request);
+
+      return new GetProfileFitbitResponse(response.StatusCode, response.Response);
     }
 
     /// <summary>
