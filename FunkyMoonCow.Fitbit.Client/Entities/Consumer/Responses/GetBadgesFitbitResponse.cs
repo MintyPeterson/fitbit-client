@@ -81,7 +81,7 @@ namespace FunkyMoonCow.Fitbit
               MotivationalMessage = result.mobileDescription,
               Name = result.name,
               JumboImageUrl = result.shareImage640px,
-              SocialMediaMessage = result.shareMessage,
+              SocialMediaMessage = result.shareText,
               ShortDescription = result.shortDescription,
               ShortName = result.shortName,
               NumberOfTimesAchieved = result.timesAchieved,
