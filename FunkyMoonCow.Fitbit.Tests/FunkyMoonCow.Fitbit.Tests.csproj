@@ -68,18 +68,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <EmbeddedResource Include="Responses\Valid\AddSubscriptionResponse.json" />
-    <EmbeddedResource Include="Responses\Invalid\AddSubscriptionResponse.json" />
-    <EmbeddedResource Include="Responses\Invalid\GetActivityTimeSeriesResponse.json" />
-    <EmbeddedResource Include="Responses\Valid\GetActivityTimeSeriesResponse.json" />
-    <EmbeddedResource Include="Responses\Valid\GetDailyActivitySummaryResponse.json" />
-    <EmbeddedResource Include="Responses\Invalid\GetDailyActivitySummaryResponse.json" />
-    <EmbeddedResource Include="Responses\Valid\GetFoodOrWaterTimeSeriesResponse.json" />
-    <EmbeddedResource Include="Responses\Invalid\GetFoodOrWaterTimeSeriesResponse.json" />
-    <EmbeddedResource Include="Responses\Valid\GetBadges.json" />
-    <EmbeddedResource Include="Responses\Invalid\GetBadges.json" />
-    <EmbeddedResource Include="Responses\Invalid\GetProfile.json" />
-    <EmbeddedResource Include="Responses\Valid\GetProfile.json" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

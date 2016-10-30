@@ -35,6 +35,8 @@ namespace FunkyMoonCow.Fitbit
     /// </summary>
     public GetDailyActivitySummaryFitbitRequest()
     {
+      this.UserId = FitbitUser.Current.ToString();
+      this.Date = DateTime.Today;
     }
 
     /// <summary>

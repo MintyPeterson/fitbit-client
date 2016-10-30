@@ -61,65 +61,11 @@ namespace FunkyMoonCow.Fitbit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to { &quot;type&quot;: &quot;object&quot;, &quot;properties&quot;: { &quot;collectionType&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;ownerId&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;ownerType&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;subscriberId&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;subscriptionId&quot;: { &quot;type&quot;: &quot;string&quot; } }, &quot;required&quot;: [ &quot;collectionType&quot;, &quot;ownerId&quot;, &quot;ownerType&quot;, &quot;subscriberId&quot;, &quot;subscriptionId&quot; ] }.
-        /// </summary>
-        internal static string AddSubscriptionSchema {
-            get {
-                return ResourceManager.GetString("AddSubscriptionSchema", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to {&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;errors&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;errorType&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;message&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;errorType&quot;,&quot;message&quot;]}},&quot;success&quot;:{&quot;type&quot;:&quot;boolean&quot;}},&quot;required&quot;:[&quot;errors&quot;,&quot;success&quot;]}.
         /// </summary>
         internal static string ErrorSchema {
             get {
                 return ResourceManager.GetString("ErrorSchema", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;properties&quot;: { &quot;dateTime&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;value&quot;: { &quot;type&quot;: &quot;string&quot; } }, &quot;required&quot;: [ &quot;dateTime&quot;, &quot;value&quot; ] } }.
-        /// </summary>
-        internal static string GetActivityTimeSeriesSchema {
-            get {
-                return ResourceManager.GetString("GetActivityTimeSeriesSchema", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to { &quot;type&quot;: &quot;object&quot;, &quot;properties&quot;: { &quot;badges&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;properties&quot;: { &quot;badgeType&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;dateTime&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;image50px&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;image75px&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;timesAchieved&quot;: { &quot;type&quot;: &quot;integer&quot; }, &quot;value&quot;: { &quot;type&quot;: &quot;integer&quot; }, &quot;unit&quot;: { &quot;type&quot;: &quot;string&quot; }, }, &quot;required&quot;: [ &quot;badgeType&quot;, &quot;dateTime&quot;, &quot;image50px&quot;, &quot;image75px&quot;, &quot;timesAchieved&quot;, &quot;value&quot; ] } } }, &quot;required&quot;: [ &quot;badges&quot; ] }.
-        /// </summary>
-        internal static string GetBadgesSchema {
-            get {
-                return ResourceManager.GetString("GetBadgesSchema", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;activities&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;activityId&quot;:{&quot;type&quot;:&quot;integer&quot;},&quot;activityParentId&quot;:{&quot;type&quot;:&quot;integer&quot;},&quot;calories&quot;:{&quot;type&quot;:&quot;integer&quot;},&quot;description&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;distance&quot;:{&quot;type&quot;:&quot;number&quot;},&quot;duration&quot;:{&quot;type&quot;:&quot;integer&quot;},&quot;hasStartTime&quot;:{&quot;type&quot;:&quot;boolean&quot;},&quot;isFavorite&quot;:{&quot;type&quot;:&quot;boolean&quot;},&quot;logId&quot;:{&quot;type&quot;:&quot;integer&quot;},&quot;name&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;startTime&quot;:{&quot;type&quot;:&quot;string&quot;},&quot;steps&quot;:{&quot;type&quot;:&quot;integer&quot;}},&quot;required&quot;:[&quot;activityId&quot;,&quot;activityParentId&quot;,&quot;c [rest of stri....
-        /// </summary>
-        internal static string GetDailyActivitySummarySchema {
-            get {
-                return ResourceManager.GetString("GetDailyActivitySummarySchema", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to { &quot;type&quot;: &quot;array&quot;, &quot;items&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;properties&quot;: { &quot;dateTime&quot;: { &quot;type&quot;: &quot;string&quot; }, &quot;value&quot;: { &quot;type&quot;: &quot;string&quot; } }, &quot;required&quot;: [ &quot;dateTime&quot;, &quot;value&quot; ] } }.
-        /// </summary>
-        internal static string GetFoodOrWaterTimeSeriesSchema {
-            get {
-                return ResourceManager.GetString("GetFoodOrWaterTimeSeriesSchema", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to { &quot;type&quot;: &quot;object&quot;, &quot;properties&quot;: { &quot;user&quot;: { &quot;type&quot;: &quot;object&quot;, &quot;properties&quot;: {} } }, &quot;required&quot;: [ &quot;user&quot; ] }.
-        /// </summary>
-        internal static string GetProfileSchema {
-            get {
-                return ResourceManager.GetString("GetProfileSchema", resourceCulture);
             }
         }
         

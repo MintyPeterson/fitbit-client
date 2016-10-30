@@ -45,14 +45,27 @@ namespace FunkyMoonCow.Fitbit
     /// </summary>
     public GetFoodOrWaterTimeSeriesFitbitRequest()
     {
+      this.UserId = FitbitUser.Current.ToString();
     }
 
     /// <summary>
     /// Gets the endpoint URI.
     /// </summary>
     /// <returns>The URI.</returns>
+    /// <exception cref="InvalidOperationException">Thrown when the <see cref="IFitbitRequest"/>
+    /// does not contain the required properties.</exception>
     public override string GetUri()
     {
+      if (this.Resource == GetFoodOrWaterTimeSeriesResource.None)
+      {
+        throw new InvalidOperationException("You must specify a food or water resource.");
+      }
+
+      if (!this.EndDate.HasValue && this.Period == GetFoodOrWaterTimeSeriesPeriod.None)
+      {
+        throw new InvalidOperationException("You must specify either an end date or a period.");
+      }
+
       var resource = new Dictionary<GetFoodOrWaterTimeSeriesResource, String>();
       {
         resource.Add(

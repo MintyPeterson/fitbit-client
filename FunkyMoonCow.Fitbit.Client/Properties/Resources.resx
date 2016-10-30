@@ -117,33 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddSubscriptionSchema" xml:space="preserve">
-    <value>{ "type": "object", "properties": { "collectionType": { "type": "string" }, "ownerId": { "type": "string" }, "ownerType": { "type": "string" }, "subscriberId": { "type": "string" }, "subscriptionId": { "type": "string" } }, "required": [ "collectionType", "ownerId", "ownerType", "subscriberId", "subscriptionId" ] }</value>
-    <comment>The JSON schema for add subscription messages.</comment>
-  </data>
   <data name="ErrorSchema" xml:space="preserve">
     <value>{"type":"object","properties":{"errors":{"type":"array","items":{"type":"object","properties":{"errorType":{"type":"string"},"message":{"type":"string"}},"required":["errorType","message"]}},"success":{"type":"boolean"}},"required":["errors","success"]}</value>
     <comment>The JSON schema for error messages.</comment>
-  </data>
-  <data name="GetActivityTimeSeriesSchema" xml:space="preserve">
-    <value>{ "type": "array", "items": { "type": "object", "properties": { "dateTime": { "type": "string" }, "value": { "type": "string" } }, "required": [ "dateTime", "value" ] } }</value>
-    <comment>The JSON schema for the activity time series messages.</comment>
-  </data>
-  <data name="GetBadgesSchema" xml:space="preserve">
-    <value>{ "type": "object", "properties": { "badges": { "type": "array", "items": { "type": "object", "properties": { "badgeType": { "type": "string" }, "dateTime": { "type": "string" }, "image50px": { "type": "string" }, "image75px": { "type": "string" }, "timesAchieved": { "type": "integer" }, "value": { "type": "integer" }, "unit": { "type": "string" }, }, "required": [ "badgeType", "dateTime", "image50px", "image75px", "timesAchieved", "value" ] } } }, "required": [ "badges" ] }</value>
-    <comment>The JSON schema for get badges messages.</comment>
-  </data>
-  <data name="GetDailyActivitySummarySchema" xml:space="preserve">
-    <value>{"type":"object","properties":{"activities":{"type":"array","items":{"type":"object","properties":{"activityId":{"type":"integer"},"activityParentId":{"type":"integer"},"calories":{"type":"integer"},"description":{"type":"string"},"distance":{"type":"number"},"duration":{"type":"integer"},"hasStartTime":{"type":"boolean"},"isFavorite":{"type":"boolean"},"logId":{"type":"integer"},"name":{"type":"string"},"startTime":{"type":"string"},"steps":{"type":"integer"}},"required":["activityId","activityParentId","calories","description","distance","duration","hasStartTime","isFavorite","logId","name","startTime","steps"]}},"goals":{"type":"object","properties":{"caloriesOut":{"type":"integer"},"distance":{"type":"number"},"floors":{"type":"integer"},"steps":{"type":"integer"}},"required":["caloriesOut","distance","floors","steps"]},"summary":{"type":"object","properties":{"activityCalories":{"type":"integer"},"caloriesBMR":{"type":"integer"},"caloriesOut":{"type":"integer"},"distances":{"type":"array","items":{"type":"object","properties":{"activity":{"type":"string"},"distance":{"type":"number"}},"required":["activity","distance"]}},"elevation":{"type":"number"},"fairlyActiveMinutes":{"type":"integer"},"floors":{"type":"integer"},"lightlyActiveMinutes":{"type":"integer"},"marginalCalories":{"type":"integer"},"sedentaryMinutes":{"type":"integer"},"steps":{"type":"integer"},"veryActiveMinutes":{"type":"integer"}},"required":["activityCalories","caloriesBMR","caloriesOut","distances","elevation","fairlyActiveMinutes","floors","lightlyActiveMinutes","marginalCalories","sedentaryMinutes","steps","veryActiveMinutes"]}},"required":["activities","goals","summary"]}</value>
-    <comment>The JSON schema for daily activity summary messages.</comment>
-  </data>
-  <data name="GetFoodOrWaterTimeSeriesSchema" xml:space="preserve">
-    <value>{ "type": "array", "items": { "type": "object", "properties": { "dateTime": { "type": "string" }, "value": { "type": "string" } }, "required": [ "dateTime", "value" ] } }</value>
-    <comment>The JSON schema for the food or water time series messages.</comment>
-  </data>
-  <data name="GetProfileSchema" xml:space="preserve">
-    <value>{ "type": "object", "properties": { "user": { "type": "object", "properties": {} } }, "required": [ "user" ] }</value>
-    <comment>The JSON schema for get profile messages.</comment>
   </data>
   <data name="RefreshAccessTokenSchema" xml:space="preserve">
     <value>{"type":"object","properties":{"access_token":{"type":"string"},"expires_in":{"type":"integer"},"refresh_token":{"type":"string"},"token_type":{"type":"string"},"user_id":{"type":"string"}},"required":["access_token","expires_in","refresh_token","token_type","user_id"]}</value>

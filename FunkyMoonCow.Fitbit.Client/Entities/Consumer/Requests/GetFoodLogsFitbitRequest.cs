@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace FunkyMoonCow.Fitbit
 {
   /// <summary>
   /// Provides a <see cref="FitbitRequest"/> for 
-  /// <see cref="FitbitClient.GetBadges(GetBadgesFitbitRequest)"/>.
+  /// <see cref="FitbitClient.GetFoodLogs(GetFoodLogsFitbitRequest)"/>.
   /// </summary>
-  public class GetBadgesFitbitRequest : FitbitRequest
+  public class GetFoodLogsFitbitRequest : FitbitRequest
   {
     /// <summary>
     /// Gets or sets the user identifier.
@@ -14,16 +15,22 @@ namespace FunkyMoonCow.Fitbit
     public string UserId { get; set; }
 
     /// <summary>
+    /// Gets or sets the <see cref="DateTime.Date"/>.
+    /// </summary>
+    public DateTime Date { get; set; }
+
+    /// <summary>
     /// Gets or sets the <see cref="FitbitUnit"/>.
     /// </summary>
     public FitbitUnit Units { get; set; }
 
     /// <summary>
-    /// Intialises a new instance of the <see cref="GetBadgesFitbitRequest"/> class.
+    /// Intialises a new instance of the <see cref="GetFoodLogsFitbitRequest"/> class.
     /// </summary>
-    public GetBadgesFitbitRequest()
+    public GetFoodLogsFitbitRequest()
     {
       this.UserId = FitbitUser.Current.ToString();
+      this.Date = DateTime.Today;
     }
 
     /// <summary>
@@ -32,7 +39,11 @@ namespace FunkyMoonCow.Fitbit
     /// <returns>The URI.</returns>
     public override string GetUri()
     {
-      return string.Format("/1/user/{0}/badges.json", this.UserId);
+      return string.Format(
+          "/1/user/{0}/foods/log/date/{1}.json",
+          this.UserId,
+          this.Date.ToString("yyyy-MM-dd")
+        );
     }
 
     /// <summary>

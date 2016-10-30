@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace FunkyMoonCow.Fitbit
@@ -46,9 +45,16 @@ namespace FunkyMoonCow.Fitbit
     /// <summary>
     /// Gets the endpoint URI.
     /// </summary>
-    /// <returns></returns>
+    /// <returns>The endpoint URI.</returns>
+    /// <exception cref="InvalidOperationException">Thrown when the <see cref="IFitbitRequest"/>
+    /// does not contain the required properties.</exception>
     public override string GetUri()
     {
+      if (string.IsNullOrWhiteSpace(this.SubscriptionId))
+      {
+        throw new InvalidOperationException("You must specify a subscription ID.");
+      }
+
       var collectionPath = new Dictionary<AddSubscriptionCollectionPath, String>();
       {
         collectionPath.Add(

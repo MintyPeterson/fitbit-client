@@ -9,24 +9,29 @@ using System.Net;
 namespace FunkyMoonCow.Fitbit
 {
   /// <summary>
-  /// Provides a base class for consumer responses.
+  /// Represents a response from the client.
   /// </summary>
-  public abstract class FitbitResponse : IFitbitResponse
+  public class FitbitResponse : IFitbitResponse
   {
     /// <summary>
     /// Gets or sets the <see cref="StatusCode"/>.
     /// </summary>
-    protected HttpStatusCode StatusCode { get; set; }
+    public HttpStatusCode StatusCode { get; private set; }
 
     /// <summary>
-    /// Gets or sets the <see cref="JObject"/> response from the API.
+    /// Gets the raw response from the API.
     /// </summary>
-    protected JObject Response { get; set; }
+    public string RawResponse { get; private set; }
 
     /// <summary>
-    /// Gets the <see cref="IEnumerable{FitbitResponseError}"/>.
+    /// Gets the <see cref="JObject"/> response from the API.
     /// </summary>
-    public IEnumerable<FitbitResponseError> Errors { get; set; }
+    public JObject Response { get; private set; }
+
+    /// <summary>
+    /// Gets the <see cref="IEnumerable{FitbitError}"/>.
+    /// </summary>
+    public IEnumerable<FitbitError> Errors { get; set; }
 
     /// <summary>
     /// Gets a value indicating if the <see cref="FitbitResponse"/>
@@ -44,42 +49,33 @@ namespace FunkyMoonCow.Fitbit
     /// Initialises a new instance of the <see cref="FitbitResponse"/> class.
     /// </summary>
     /// <param name="statusCode">The <see cref="HttpStatusCode"/>.</param>
-    /// <param name="response">The <see cref="JObject"/> response.</param>
-    public FitbitResponse(HttpStatusCode statusCode, JObject response)
+    /// <param name="response">The raw response.</param>
+    public FitbitResponse(HttpStatusCode statusCode, string rawResponse)
     {
       this.StatusCode = statusCode;
-      this.Response = response;
+      this.RawResponse = rawResponse;
+
+      try
+      {
+        this.Response = JObject.Parse(rawResponse);
+      }
+      catch
+      {
+        // We don't care if the result can't be parsed.
+        // If the API isn't returning valid JSON something else is wrong.
+      }
 
       // Attempt to process any error messages.
-      this.ParseResponse();
+      this.ParseErrors();
     }
 
     /// <summary>
-    /// Adds an unexpected invalid response error to <see cref="FitbitResponse.Errors"/>.
+    /// Attempts to parse the <see cref="FitbitResponse.Response"/> for errors.
     /// </summary>
-    protected void AddUnexpectedInvalidResponseError()
+    private void ParseErrors()
     {
-      var errors = this.Errors.ToList();
+      var errors = new List<FitbitError>();
 
-      errors.Add(
-        new FitbitResponseError
-        {
-          ErrorType = FitbitResponseErrorType.Unexpected,
-          Message = "The API did not return a valid response."
-        }
-      );
-
-      this.Errors = errors;
-    }
-
-    /// <summary>
-    /// Attempts to parse the <see cref="FitbitResponse.Response"/>.
-    /// </summary>
-    private void ParseResponse()
-    {
-      var errors = new List<FitbitResponseError>();
-
-      // Add any generic errors.
       if (this.Response != null)
       {
         var schema = JSchema.Parse(Resources.ErrorSchema);
@@ -87,20 +83,20 @@ namespace FunkyMoonCow.Fitbit
         if (this.Response.IsValid(schema))
         {
           // Map the error type.
-          var map = new Dictionary<String, FitbitResponseErrorType>();
+          var map = new Dictionary<String, FitbitErrorType>();
           {
-            map.Add("expired_token", FitbitResponseErrorType.ExpiredToken);
-            map.Add("insufficient_permissions", FitbitResponseErrorType.InsufficientPermissions);
-            map.Add("insufficient_scope", FitbitResponseErrorType.InsufficientScope);
-            map.Add("invalid_grant", FitbitResponseErrorType.InvalidGrant);
-            map.Add("invalid_request", FitbitResponseErrorType.InvalidRequest);
-            map.Add("invalid_scope", FitbitResponseErrorType.InvalidScope);
-            map.Add("invalid_token", FitbitResponseErrorType.InvalidToken);
-            map.Add("not_found", FitbitResponseErrorType.NotFound);
-            map.Add("request", FitbitResponseErrorType.Request);
-            map.Add("unauthorized_client", FitbitResponseErrorType.UnauthorizedClient);
-            map.Add("unsupported_grant_type", FitbitResponseErrorType.UnsupportedGrantType);
-            map.Add("unsupported_response_type", FitbitResponseErrorType.UnsupportedResponseType);
+            map.Add("expired_token", FitbitErrorType.ExpiredToken);
+            map.Add("insufficient_permissions", FitbitErrorType.InsufficientPermissions);
+            map.Add("insufficient_scope", FitbitErrorType.InsufficientScope);
+            map.Add("invalid_grant", FitbitErrorType.InvalidGrant);
+            map.Add("invalid_request", FitbitErrorType.InvalidRequest);
+            map.Add("invalid_scope", FitbitErrorType.InvalidScope);
+            map.Add("invalid_token", FitbitErrorType.InvalidToken);
+            map.Add("not_found", FitbitErrorType.NotFound);
+            map.Add("request", FitbitErrorType.Request);
+            map.Add("unauthorized_client", FitbitErrorType.UnauthorizedClient);
+            map.Add("unsupported_grant_type", FitbitErrorType.UnsupportedGrantType);
+            map.Add("unsupported_response_type", FitbitErrorType.UnsupportedResponseType);
           }
 
           dynamic response = this.Response;
@@ -117,122 +113,12 @@ namespace FunkyMoonCow.Fitbit
                 )
                 .FirstOrDefault();
 
-            errors.Add(
-              new FitbitResponseError
-              {
-                ErrorType = errorType,
-                Message = error.message
-              }
-            );
+            errors.Add(new FitbitError(errorType, error.message.ToString()));
           }
         }
       }
 
       this.Errors = errors;
-    }
-  }
-
-  /// <summary>
-  /// Specifies a <see cref="FitbitResponseError"/> type.
-  /// </summary>
-  public enum FitbitResponseErrorType
-  {
-    /// <summary>
-    /// Unexpected.
-    /// </summary>
-    Unexpected = 0,
-
-    /// <summary>
-    /// Expired token.
-    /// </summary>
-    ExpiredToken,
-
-    /// <summary>
-    /// Insufficient permissions.
-    /// </summary>
-    InsufficientPermissions,
-
-    /// <summary>
-    /// Insufficient scope.
-    /// </summary>
-    InsufficientScope,
-
-    /// <summary>
-    /// Invalid grant
-    /// </summary>
-    InvalidGrant,
-
-    /// <summary>
-    /// Invalid request.
-    /// </summary>
-    InvalidRequest,
-
-    /// <summary>
-    /// Invalid scope.
-    /// </summary>
-    InvalidScope,
-
-    /// <summary>
-    /// Invalid token.
-    /// </summary>
-    InvalidToken,
-
-    /// <summary>
-    /// Not found.
-    /// </summary>
-    NotFound,
-
-    /// <summary>
-    /// Request.
-    /// </summary>
-    Request,
-
-    /// <summary>
-    /// Unauthorized client.
-    /// </summary>
-    UnauthorizedClient,
-
-    /// <summary>
-    /// Unsupported grant type.
-    /// </summary>
-    UnsupportedGrantType,
-
-    /// <summary>
-    /// Unsupported response type.
-    /// </summary>
-    UnsupportedResponseType,
-
-    /// <summary>
-    /// Method not allowed.
-    /// </summary>
-    MethodNotAllowed,
-
-    /// <summary>
-    /// Conflict.
-    /// </summary>
-    Conflict
-  }
-
-  /// <summary>
-  /// Represents a Fitbit error response.
-  /// </summary>
-  public class FitbitResponseError
-  {
-    /// <summary>
-    /// Gets or sets the type.
-    /// </summary>
-    public FitbitResponseErrorType ErrorType { get; set; }
-
-    /// <summary>
-    /// Gets or sets the message.
-    /// </summary>
-    public string Message { get; set; }
-
-    /// <summary>
-    /// Initialises a new instance of the <see cref="FitbitResponseError"/> class.
-    /// </summary>
-    public FitbitResponseError()
-    {
     }
   }
 }

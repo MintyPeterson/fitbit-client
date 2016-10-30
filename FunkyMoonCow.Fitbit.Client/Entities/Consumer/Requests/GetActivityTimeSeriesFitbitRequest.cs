@@ -45,6 +45,7 @@ namespace FunkyMoonCow.Fitbit
     /// </summary>
     public GetActivityTimeSeriesFitbitRequest()
     {
+      this.UserId = FitbitUser.Current.ToString();
     }
 
     /// <summary>
@@ -53,6 +54,16 @@ namespace FunkyMoonCow.Fitbit
     /// <returns>The URI.</returns>
     public override string GetUri()
     {
+      if (this.Resource == GetActivityTimeSeriesResource.None)
+      {
+        throw new InvalidOperationException("You must specify an activity time series resource.");
+      }
+
+      if (!this.EndDate.HasValue && this.Period == GetActivityTimeSeriesPeriod.None)
+      {
+        throw new InvalidOperationException("You must specify either an end date or a period.");
+      }
+
       var resource = new Dictionary<GetActivityTimeSeriesResource, String>();
       {
         resource.Add(
