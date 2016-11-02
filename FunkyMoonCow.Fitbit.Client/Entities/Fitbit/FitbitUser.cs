@@ -7,7 +7,7 @@ namespace FunkyMoonCow.Fitbit
   public sealed class FitbitUser
   {
     /// <summary>
-    /// Stores the unit.
+    /// Stores the identifier.
     /// </summary>
     private readonly string identifier;
 
