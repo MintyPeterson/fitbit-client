@@ -4,8 +4,7 @@ using System.Collections.Generic;
 namespace FunkyMoonCow.Fitbit
 {
   /// <summary>
-  /// Provides a <see cref="FitbitRequest"/> for 
-  /// <see cref="FitbitClient.GetFoodLogs(GetFoodLogsFitbitRequest)"/>.
+  /// Provides a <see cref="FitbitRequest"/> for getting food logs.
   /// </summary>
   public class GetFoodLogsFitbitRequest : FitbitRequest
   {

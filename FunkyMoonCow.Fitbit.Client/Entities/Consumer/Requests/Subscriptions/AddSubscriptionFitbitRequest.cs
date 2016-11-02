@@ -4,8 +4,7 @@ using System.Collections.Generic;
 namespace FunkyMoonCow.Fitbit
 {
   /// <summary>
-  /// Provides a <see cref="FitbitRequest"/> for
-  /// <see cref="FitbitClient.AddSubscription(AddSubscriptionFitbitRequest)"/>.
+  /// Provides a <see cref="FitbitRequest"/> for adding a subscription.
   /// </summary>
   public class AddSubscriptionFitbitRequest : FitbitRequest
   {

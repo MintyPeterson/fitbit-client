@@ -3,8 +3,7 @@
 namespace FunkyMoonCow.Fitbit
 {
   /// <summary>
-  /// Provides a <see cref="FitbitRequest"/> for 
-  /// <see cref="FitbitClient.GetBadges(GetBadgesFitbitRequest)"/>.
+  /// Provides a <see cref="FitbitRequest"/> for getting a user's badges.
   /// </summary>
   public class GetBadgesFitbitRequest : FitbitRequest
   {

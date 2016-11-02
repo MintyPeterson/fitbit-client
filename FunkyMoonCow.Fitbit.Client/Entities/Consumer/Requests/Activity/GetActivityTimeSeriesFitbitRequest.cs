@@ -4,8 +4,7 @@ using System.Collections.Generic;
 namespace FunkyMoonCow.Fitbit
 {
   /// <summary>
-  /// Provides a <see cref="FitbitRequest"/> for
-  /// <see cref="FitbitClient.GetActivityTimeSeries(GetActivityTimeSeriesFitbitRequest)"/>.
+  /// Provides a <see cref="FitbitRequest"/> for getting an activity time series.
   /// </summary>
   public class GetActivityTimeSeriesFitbitRequest : FitbitRequest
   {

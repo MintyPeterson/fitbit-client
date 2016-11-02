@@ -4,8 +4,7 @@ using System.Collections.Generic;
 namespace FunkyMoonCow.Fitbit
 {
   /// <summary>
-  /// Provides a <see cref="FitbitRequest"/> for
-  /// <see cref="FitbitClient.GetDailyActivitySummary(GetDailyActivitySummaryFitbitRequest)"/>.
+  /// Provides a <see cref="FitbitRequest"/> for getting a daily activity summary.
   /// </summary>
   public class GetDailyActivitySummaryFitbitRequest : FitbitRequest
   {

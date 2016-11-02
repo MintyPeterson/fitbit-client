@@ -3,8 +3,7 @@
 namespace FunkyMoonCow.Fitbit
 {
   /// <summary>
-  /// Provides a <see cref="FitbitRequest"/> for 
-  /// <see cref="FitbitClient.GetProfile(GetProfileFitbitRequest)"/>.
+  /// Provides a <see cref="FitbitRequest"/> for getting a user's profile.
   /// </summary>
   public class GetProfileFitbitRequest : FitbitRequest
   {
