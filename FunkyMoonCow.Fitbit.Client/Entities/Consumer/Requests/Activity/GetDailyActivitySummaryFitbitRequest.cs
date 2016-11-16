@@ -41,7 +41,7 @@ namespace FunkyMoonCow.Fitbit
     /// <summary>
     /// Gets the endpoint URI.
     /// </summary>
-    /// <returns></returns>
+    /// <returns>The URI.</returns>
     public override string GetUri()
     {
       return
