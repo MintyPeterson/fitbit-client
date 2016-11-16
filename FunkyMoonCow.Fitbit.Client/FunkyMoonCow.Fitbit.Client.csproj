@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Consumer\Requests\Activity\BrowseActivityTypesFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Requests\FitbitRequestParameter.cs" />
     <Compile Include="Entities\Consumer\Requests\Activity\GetActivityTimeSeriesFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Requests\Subscriptions\AddSubscriptionFitbitRequest.cs" />
