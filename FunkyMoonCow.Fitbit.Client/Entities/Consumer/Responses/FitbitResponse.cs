@@ -117,6 +117,15 @@ namespace FunkyMoonCow.Fitbit
           }
         }
       }
+      else
+      {
+        errors.Add(
+          new FitbitError(
+            FitbitErrorType.UnexpectedResponse,
+            "The response could not be parsed as JSON."
+          )
+        );
+      }
 
       this.Errors = errors;
     }
