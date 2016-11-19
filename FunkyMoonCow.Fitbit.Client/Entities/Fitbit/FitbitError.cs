@@ -1,4 +1,7 @@
-﻿namespace FunkyMoonCow.Fitbit
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace FunkyMoonCow.Fitbit
 {
   /// <summary>
   /// Represents a Fitbit error.
@@ -8,6 +11,7 @@
     /// <summary>
     /// Gets or sets the type.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public FitbitErrorType ErrorType { get; private set; }
 
     /// <summary>
@@ -103,6 +107,11 @@
     /// <summary>
     /// Conflict.
     /// </summary>
-    Conflict
+    Conflict,
+
+    /// <summary>
+    /// Unexpected response.
+    /// </summary>
+    UnexpectedResponse
   }
 }
