@@ -24,9 +24,9 @@ namespace FunkyMoonCow.Fitbit
     public string RawResponse { get; private set; }
 
     /// <summary>
-    /// Gets the <see cref="JObject"/> response from the API.
+    /// Gets the <see cref="JToken"/> response from the API.
     /// </summary>
-    public JObject Response { get; private set; }
+    public JToken Response { get; private set; }
 
     /// <summary>
     /// Gets the <see cref="IEnumerable{FitbitError}"/>.
@@ -57,7 +57,7 @@ namespace FunkyMoonCow.Fitbit
 
       try
       {
-        this.Response = JObject.Parse(rawResponse);
+        this.Response = JToken.Parse(rawResponse);
       }
       catch
       {
