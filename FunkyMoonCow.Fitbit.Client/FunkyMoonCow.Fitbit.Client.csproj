@@ -66,43 +66,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Consumer\Requests\Activity\BrowseActivityTypesFitbitRequest.cs" />
-    <Compile Include="Entities\Consumer\Requests\Activity\GetRecentActivityTypesFitbitRequest.cs" />
-    <Compile Include="Entities\Consumer\Requests\Activity\GetFrequentActivitiesFitbitRequest.cs" />
-    <Compile Include="Entities\Consumer\Requests\Activity\GetActivityTypeFitbitRequest.cs" />
-    <Compile Include="Entities\Consumer\Requests\FitbitRequestParameter.cs" />
-    <Compile Include="Entities\Consumer\Requests\Activity\GetActivityTimeSeriesFitbitRequest.cs" />
-    <Compile Include="Entities\Consumer\Requests\Subscriptions\AddSubscriptionFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Requests\FitbitRequestAction.cs" />
-    <Compile Include="Entities\Consumer\Requests\Food\GetFoodLogsFitbitRequest.cs" />
-    <Compile Include="Entities\Consumer\Requests\User\GetProfileFitbitRequest.cs" />
-    <Compile Include="Entities\Consumer\Requests\User\GetBadgesFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Requests\IFitbitRequest.cs" />
-    <Compile Include="Entities\Consumer\Requests\Activity\GetDailyActivitySummaryFitbitRequest.cs" />
-    <Compile Include="Entities\Consumer\Requests\User\UpdateProfileFitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Responses\IFitbitResponse.cs" />
     <Compile Include="Entities\Fitbit\FitbitError.cs" />
-    <Compile Include="Entities\Fitbit\FitbitGender.cs" />
-    <Compile Include="Entities\Fitbit\FitbitCountry.cs" />
-    <Compile Include="Entities\Fitbit\FitbitGlucoseUnit.cs" />
-    <Compile Include="Entities\Fitbit\FitbitTimeDisplayFormat.cs" />
-    <Compile Include="Entities\Fitbit\FitbitTimezone.cs" />
-    <Compile Include="Entities\Fitbit\FitbitLanguage.cs" />
-    <Compile Include="Entities\Fitbit\FitbitStartDayOfWeek.cs" />
-    <Compile Include="Entities\Fitbit\FitbitWaterUnit.cs" />
-    <Compile Include="Entities\Fitbit\FitbitHeightUnit.cs" />
-    <Compile Include="Entities\Fitbit\FitbitWeightUnit.cs" />
-    <Compile Include="Helpers\DateTimeRange.cs" />
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="FitbitClient.cs" />
-    <Compile Include="Entities\Fitbit\FitbitLocale.cs" />
     <Compile Include="Entities\Consumer\Requests\FitbitRequest.cs" />
     <Compile Include="Entities\Consumer\Requests\FitbitRequestHeader.cs" />
     <Compile Include="Entities\Consumer\Responses\FitbitResponse.cs" />
-    <Compile Include="Entities\Fitbit\FitbitUnit.cs" />
-    <Compile Include="Entities\Fitbit\FitbitUser.cs" />
-    <Compile Include="Entities\Consumer\Requests\Food\GetFoodOrWaterTimeSeriesFitbitRequest.cs" />
-    <Compile Include="Entities\Fitbit\FitbitState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
