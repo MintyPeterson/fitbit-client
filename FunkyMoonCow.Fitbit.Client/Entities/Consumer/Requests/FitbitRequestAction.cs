@@ -13,6 +13,11 @@
     /// <summary>
     /// POST.
     /// </summary>
-    Post = 1
+    Post = 1,
+
+    /// <summary>
+    /// DELETE.
+    /// </summary>
+    Delete = 2
   }
 }

@@ -162,6 +162,10 @@ namespace FunkyMoonCow.Fitbit
         {
           result = client.PostAsync(request.GetUri(), null).Result;
         }
+        else if (request.Action == FitbitRequestAction.Delete)
+        {
+          result = client.DeleteAsync(request.GetUri()).Result;
+        }
         else
         {
           throw new ArgumentOutOfRangeException("request.Action");
