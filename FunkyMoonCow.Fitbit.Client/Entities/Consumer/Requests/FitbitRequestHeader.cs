@@ -1,5 +1,4 @@
-﻿
-namespace FunkyMoonCow.Fitbit
+﻿namespace FunkyMoonCow.Fitbit
 {
   /// <summary>
   /// Represents a header that is sent as part of a <see cref="FitbitRequest"/>.
