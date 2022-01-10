@@ -1,5 +1,7 @@
 ## A .NET FITBIT® client
-A C# client for the FITBIT® API.
+A C# client for the FITBIT® API. It is designed for use with the FITBIT® platform, which is subject to the following terms of service:
+
+- https://dev.fitbit.com/terms
 ### Authentication
 Before using the client, you must authenticate against the FITBIT® API using OAUTH 2.0. You can do this using OWIN and the `Owin.Security.Providers.Fitbit` authentication provider. For an implementation guide, please see https://github.com/TerribleDev/OwinOAuthProviders.
 ### Usage
